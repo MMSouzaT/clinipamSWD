@@ -43,7 +43,7 @@ public class ClinipamCreateTest {
         new LoginPage(navegador)
                 .makeAllAboutLogin().lateralMenuAccessValidation()
                 .newValidation().fillAllValidationCreat().saveValidation()
-        .sucessfulMessageAV();
+                .sucessfulMessageAV();
 
     }
 
@@ -51,7 +51,7 @@ public class ClinipamCreateTest {
     public void notificationCreate() {
         new LoginPage(navegador)
                 .makeAllAboutLogin().lateralMenuNotifications()
-                .newNotification().fillAllinNotification("notificaçao tela","19082020", "0905")
+                .newNotification().fillAllinNotification("fechado", "20082020", "0920")
                 .addUsers().addUserClinipam().successMessageN();
 
     }
@@ -70,11 +70,11 @@ public class ClinipamCreateTest {
                 .makeAllAboutLogin().lateralMenuCareTypes()
                 .newCareType().fillCareType()
                 .saveCareTypeCreate()
-        .successMessageCT();
+                .successMessageCT();
     }
 
     @Test
-    public void unavailabilityTypesCreate(){
+    public void unavailabilityTypesCreate() {
         new LoginPage(navegador)
                 .makeAllAboutLogin().lateralMenuUnavailabilityTypes()
                 .newUnavailableType().fillUnavailabilityType()
@@ -83,6 +83,6 @@ public class ClinipamCreateTest {
 
     @After
     public void tearDown() {
-        navegador.quit();
+        //navegador.quit();
     }
 }
